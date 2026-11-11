@@ -26,14 +26,13 @@
     },
     "packageRules": [
         {
-            // Group Google Analytics packages together since they are part of
-            // the same release process.
-            "description": "Group Google Analytics API updates",
+            // Google's auth libraries are released together.
+            "description": "Group Google auth library updates",
             "matchPackageNames": [
-                "google-analytics-data",
-                "google-analytics-admin"
+                "google-auth",
+                "google-auth-oauthlib"
             ],
-            "groupName": "Google Analytics APIs"
+            "groupName": "Google auth libraries"
         }
     ]
 }

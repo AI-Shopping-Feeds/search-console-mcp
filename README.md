@@ -100,7 +100,7 @@ uvx --from git+https://github.com/AI-Shopping-Feeds/search-console-mcp.git searc
 
 Add `--allow-write` after `search-console-mcp` to enable the sitemap write tools (here and in the client configs below). Pin a release by adding `@vX.Y.Z` to the URL.
 
-### 2. Sign in to Google
+### 2. Get credentials
 
 1. **Google Cloud project:** enable the
    [Google Search Console API](https://console.cloud.google.com/apis/library/searchconsole.googleapis.com)
