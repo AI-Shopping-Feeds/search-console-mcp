@@ -1,0 +1,94 @@
+*.py[cod]
+*.sw[op]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+.eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+__pycache__
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.nox
+.cache
+.pytest_cache
+
+
+# Mac
+.DS_Store
+
+# JetBrains
+.idea
+
+# VS Code
+.vscode
+
+# emacs
+*~
+
+# Built documentation
+docs/_build
+docs.metadata
+
+# Virtual environment
+env/
+venv/
+.venv/
+
+# pyenv
+.python-version
+
+# Test logs
+coverage.xml
+*sponge_log.xml
+
+# System test environment variables.
+system_tests/local_test_setup
+
+# Make sure a generated file isn't accidentally committed.
+pylintrc
+pylintrc.test
+
+.agents/skills
+
+# --- AI Shopping Feeds: credentials, local config and tool output ---
+# Never commit Google credentials or OAuth tokens.
+.env
+.env.*
+!.env.example
+secrets/
+client_secret*.json
+*service-account*.json
+*service_account*.json
+credentials.json
+token.json
+oauth-token.json
+# Audit logs written by the server
+logs/
+# Tool caches, build output and OS files
+.venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+*.egg-info/
+dist/
+build/
+.DS_Store

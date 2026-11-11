@@ -1,0 +1,53 @@
+[project]
+name = "search-console-mcp"
+description = "Google Search Console MCP server: search analytics, period comparisons, sitemaps and URL Inspection, read-only by default."
+version = "0.1.0"
+# Lower bound of 3.10 due to the 'mcp' dependency:
+# https://github.com/modelcontextprotocol/python-sdk/blob/main/pyproject.toml
+requires-python = ">=3.10"
+license = "Apache-2.0"
+readme = "README.md"
+dependencies = [
+    "google-auth~=2.62",
+    "google-auth-oauthlib>=1.2.0",
+    "requests>=2.31",
+    "mcp>=2.3.0,<3",
+    "httpx>=0.28.1",
+]
+keywords = ["google search console", "search console", "seo", "mcp", "url inspection", "sitemaps", "search console mcp", "model context protocol"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: OS Independent",
+    "Topic :: Internet",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+authors = [
+    { name = "AI Shopping Feeds" },
+]
+
+[project.urls]
+homepage = "https://github.com/AI-Shopping-Feeds/search-console-mcp"
+repository = "https://github.com/AI-Shopping-Feeds/search-console-mcp.git"
+issues = "https://github.com/AI-Shopping-Feeds/search-console-mcp/issues"
+
+[project.scripts]
+search-console-mcp = "search_console_mcp.server:main"
+
+[project.optional-dependencies]
+dev = ["black", "nox >=2026.2.9, <2027"]
+
+[build-system]
+requires = ["setuptools>=82.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+# Ship only the server package; skills/ and docs/ are not Python packages.
+include = ["search_console_mcp*"]
